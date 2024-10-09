@@ -11,4 +11,18 @@ For example, if the input is:
 The output should be:
 {'odd': [3, 5], 'even': [2, 4, 6]}
 '''
+#uses: indefinite loops, lists /dicts, input
 
+odd = []
+even = []
+num_dict = {'odd': odd, 'even': even}
+
+while True:
+    num = int(input("Enter a number: "))
+    if num % 2 == 0 and num != 0:
+       even.append(num)
+    elif num% 2 != 0:
+        odd.append(num)
+    elif num == 0:
+        print(num_dict)
+        break
